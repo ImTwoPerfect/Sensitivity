@@ -1,0 +1,116 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #1C6EA4;
+}
+
+/* Wrapper */
+#wrapper {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom right, #154D71, #1C6EA4);
+  color: #fff;
+  margin-top:50px;
+  min-height: 40vh;
+  max-width: 600px;
+  margin: 1vh auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout */
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 0.3em;
+}
+
+.radio-label {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+
+input[type="number"],
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  background-color: #154D71;
+  color: #fff;
+}
+
+button {
+  background-color: #154D71;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #33A1E0;
+}
+
+/* Output */
+pre {
+  background: #154D71;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+a {
+	color:FFFFFF;
+	text-decoration: none;
+}
+
+a:link, a:visited, a:hover {
+	display:flex;
+	justify-content:space-around;
+	color:white;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #wrapper {
+    border-radius: 0;
+    margin: 0;
+  }
+}
