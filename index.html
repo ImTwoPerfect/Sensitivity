@@ -1,42 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
+<html>
+ <head>
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arsenal Sensitivity Converter</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Game Sensitivity Converter</title>
+  <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/x-icon" href="icon.ico">
-</head>
-<body>
- <div id="wrapper">
-  <div class="container">
+ </head>
+ <body>
+  <div id="wrapper">
+   <div class="container">
     <header>
-      <h1>Arsenal Sensitivity Converter</h1>
-    </header>
-    <main>
-      <div class="input-group">
-        <label>Sensitivity OR cm/360:
-          <input type="number" id="sensInput" />
-        </label>
-        <label>FOV:
-          <input type="number" id="fovInput" />
-        </label>
-		<label class="radio-label">
-		  <input type="radio" id="cmRadio" name="radioGroup"/>
-		  <span>cm/360</span>
-		</label>
-		<label class="radio-label">
-		  <input type="radio" id="valRadio" name="radioGroup"/>
-		  <span>Valorant</span>
-		</label>
-        <button id="calcButton">📟 Calculate</button>
-      </div>
-      <pre id="output"></pre>
-    </main>
+	 <h1>Game Sensitivity Converter</h1>
+	</header>
+	<main>
+	 <div class="input-group">
+	  <label>Select Game
+	   <select id="ogGames">
+	    <option value="valorant">Valorant</option>
+	    <option value="arsenal">ROBLOX: Arsenal</option>
+	    <option value="cm">CM/360</option>
+	   </select>
+	  </label>
+	  <label>Sensitivity:
+	  <input type="number" id="sensInput">
+	  </label>
+	  <label id="ogFOV" for="ogFovRange">FOV: 95</label>
+	   <input type="range" min="70" max="120" value="95" class="slider" id="ogFovRange">
+	  <label>Convert To:</label>
+	  <label>Select Game
+	   <select id="toGames">
+	    <option value="valorant">Valorant</option>
+	    <option value="arsenal">ROBLOX: Arsenal</option>
+	    <option value="cm">CM/360</option>
+	   </select>
+	  </label>
+	  <label id="toFOV" for="toFovRange">FOV: 95</label>
+	   <input type="range" min="70" max="120" value="95" class="slider" id="toFovRange">
+	  <button id="calcButton">📟 Calculate</button>
+	 </div>
+	 <pre id="output"></pre>
+	</main>
   </div>
   <br>
   <a href="https://imtwoperfect.github.io/ArsenalXPCalculator/" id="linkTo">Try my XP Calculator!</a>
- </div>
- <script src="script.js"></script>
-</body>
+  <script src="script.js"></script>
+ </body>
 </html>
